@@ -1,7 +1,7 @@
 package com.bkacad.app.exception;
 
-public class UnknownException extends Exception{
+public class UnknownException extends AbstractException{
     public UnknownException(){
-        super("Lỗi không rõ nguyên nhân!!!");
+        super("Unknown error!!!");
     }
 }

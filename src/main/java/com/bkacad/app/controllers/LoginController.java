@@ -5,7 +5,7 @@ import com.bkacad.app.exception.AbstractException;
 import com.bkacad.app.exception.LoginFailedException;
 import com.bkacad.app.exception.ServerErrorException;
 import com.bkacad.app.models.entity.User;
-import com.bkacad.app.models.facade.UserDAOInterface;
+import com.bkacad.app.models.facade.UserDAO;
 import com.bkacad.app.views.login.LoginView;
 import com.bkacad.app.views.menu.AdminHomeView;
 import com.bkacad.app.views.menu.BaseHomeView;
@@ -13,9 +13,9 @@ import com.bkacad.app.views.menu.SaleHomeView;
 import com.bkacad.app.views.menu.WarehouseHomeView;
 
 public class LoginController {
-    UserDAOInterface userDAO;
+    UserDAO userDAO;
 
-    public LoginController(UserDAOInterface userDAO){
+    public LoginController(UserDAO userDAO){
         this.userDAO = userDAO;
     }
 
@@ -35,7 +35,7 @@ public class LoginController {
                 case WAREHOUSE:
                     return new WarehouseHomeView();
                 default:
-                    throw new ServerErrorException(String.format("Unknown `user.role` <{}> of `user` <{}>",user.role.toString(), user.username));
+                    throw new ServerErrorException(String.format("Unknown `user.role` <%s> of `user` <%s>",user.role.toString(), user.username));
             }
         }
         throw new LoginFailedException(view.username);

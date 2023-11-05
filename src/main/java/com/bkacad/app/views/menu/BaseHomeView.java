@@ -10,6 +10,6 @@ public class BaseHomeView extends AbstractView{
     @Override
     public void render() throws AbstractException{
         System.out.println("-------------------");
-        System.out.println(String.format("Welcome back, {} ...", App.loggedIn.username));
+        System.out.println(String.format("Welcome back, %s ...", App.loggedIn.username));
     }
 }

@@ -6,9 +6,9 @@ import java.sql.*;
 import com.bkacad.app.exception.ServerErrorException;
 import com.bkacad.app.exception.UserNotFoundException;
 import com.bkacad.app.models.entity.User;
-import com.bkacad.app.models.facade.UserDAOInterface;
+import com.bkacad.app.models.facade.UserDAO;
 
-public class DBUserManager implements UserDAOInterface{
+public class DBUserManager implements UserDAO{
     Connection conn;
     public DBUserManager(Connection conn){
         this.conn = conn;
@@ -78,6 +78,23 @@ public class DBUserManager implements UserDAOInterface{
         }
         catch (SQLException e){
             throw new ServerErrorException("SQL: "+ e.getMessage());
+        }
+    }
+
+    @Override
+    public void editUser(User user) throws ServerErrorException {
+        try {
+            // Sử dụng prepareStatement
+            final String QUERY = "update users set password=?, role=? where username=?";
+            PreparedStatement stm = conn.prepareStatement(QUERY);
+            // Thay `password` vào dấu ? thứ nhất
+            stm.setString(1, user.password);
+            stm.setString(2, user.getRole());
+            stm.setString(3, user.username);
+            stm.executeUpdate();
+        }
+        catch (SQLException e){
+            throw new ServerErrorException("SQL: "+e.getMessage());
         }
     }
 }

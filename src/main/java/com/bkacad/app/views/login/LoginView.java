@@ -17,6 +17,6 @@ public class LoginView extends AbstractView {
         this.username = input.nextLine();
         System.out.print("Mật khẩu: ");
         this.password = input.nextLine();
-        loginController.process(this).render();
+        loginController.process(this).display();
     }
 }

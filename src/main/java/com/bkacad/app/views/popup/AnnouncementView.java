@@ -20,8 +20,8 @@ public class AnnouncementView<i extends AbstractView> extends AbstractView{
         System.out.println("--[Announcement]--");
         System.out.println(msg);
         System.out.println("Press any key to continue...");
-        input.nextLine();
-        this.returnedView.render();
+        String x = input.nextLine();
+        this.returnedView.display();
     }
     
 }

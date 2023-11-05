@@ -9,7 +9,7 @@ import com.bkacad.app.controllers.LoginController;
 import com.bkacad.app.controllers.UserController;
 import com.bkacad.app.exception.AbstractException;
 import com.bkacad.app.models.entity.User;
-import com.bkacad.app.models.facade.UserDAOInterface;
+import com.bkacad.app.models.facade.UserDAO;
 import com.bkacad.app.models.impl.DBUserManager;
 import com.bkacad.app.views.error.ErrorView;
 import com.bkacad.app.views.login.LoginView;
@@ -35,7 +35,7 @@ public class App
     private static LoginController loginController;
 
     @Getter
-    private static UserDAOInterface userDAO;
+    private static UserDAO userDAO;
 
     @Getter
     private static Scanner input;
@@ -58,7 +58,7 @@ public class App
         init();
         try {
             LoginView lgv = new LoginView();
-            lgv.render();
+            lgv.display();
         }
         catch (AbstractException e){
             ErrorView err = new ErrorView(e);

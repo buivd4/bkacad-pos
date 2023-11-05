@@ -7,6 +7,9 @@ import com.bkacad.app.exception.AbstractException;
 import com.bkacad.app.exception.WrongUserInputException;
 import com.bkacad.app.views.error.ErrorView;
 import com.bkacad.app.views.user.UserAddView;
+import com.bkacad.app.views.user.prompt.PromptUsernameForEditView;
+import com.bkacad.app.views.user.prompt.PromptUsernameForReadView;
+import com.bkacad.app.views.user.prompt.PromptUsernameForRemoveView;
 
 public class AdminHomeView extends BaseHomeView{
     private Scanner input = App.getInput();
@@ -27,18 +30,22 @@ public class AdminHomeView extends BaseHomeView{
             String selection = input.nextLine();
             switch (selection){
                 case "L":
-                    userController.process().render();;
+                    userController.process().display();;
                     break;
                 case "V":
-                    userController.process().render();;
+                    new PromptUsernameForReadView().display();
                     break;
-
                 case "C":
-                    new UserAddView().render();;
+                    new UserAddView().display();;
                     break;
+                case "E":
+                    new PromptUsernameForEditView().display();
+                    break;
+                case "R":
+                    new PromptUsernameForRemoveView().display();
                 case "-":
                     System.out.println("Good bye...");
-                    return;
+                    System.exit(0);
                 default:
                     ErrorView ev = new ErrorView(new WrongUserInputException("Wrong selection!!!!!"));
                     ev.render();

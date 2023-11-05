@@ -37,7 +37,7 @@ public class UserAddView extends AbstractView{
             default:
                 new ErrorView("Wrong input role!!!").render();
         }
-        this.userController.process(this).render();
+        this.userController.process(this).display();
     }
     
 }

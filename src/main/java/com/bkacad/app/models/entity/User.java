@@ -48,4 +48,20 @@ public class User {
                 return "W";
         }
     }
+    public void setRole(String role){
+        switch (role){
+            case "ADMIN":
+                this.role = UserRole.ADMIN;
+                break;
+            case "SALE":
+                this.role = UserRole.SALE;
+                break;
+            case "WAREHOUSE":
+                this.role = UserRole.WAREHOUSE;
+                break;
+            default:
+                this.role = UserRole.WAREHOUSE;
+        }
+    }
+
 }

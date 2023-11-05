@@ -16,14 +16,13 @@ public class WarehouseHomeView extends BaseHomeView{
             super.render();
             System.out.println("-------------------");
             System.out.println("Choose an action...");
-            System.out.println("[L] List invoices");
-            System.out.println("[V] View invoice");
-            System.out.println("[C] Create invoice");
-            System.out.println("[X] Export invoice");
-            System.out.println("[E] Edit invoice");
-            System.out.println("[R] Remove invoice");
+            System.out.println("[L] List products");
+            System.out.println("[V] View product");
+            System.out.println("[C] Create product");
+            System.out.println("[E] Edit product");
+            System.out.println("[R] Remove product");
             System.out.println("[-] Exit");
-            System.out.print("Your selection [L]/[V]/[C]/[X]/[E]/[R]: ");
+            System.out.print("Your selection [L]/[V]/[C]/[E]/[R]: ");
             String selection = input.nextLine();
             switch (selection){
                 case "A":

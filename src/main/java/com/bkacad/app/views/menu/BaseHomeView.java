@@ -2,7 +2,7 @@ package com.bkacad.app.views.menu;
 
 import com.bkacad.app.App;
 import com.bkacad.app.controllers.UserController;
-import com.bkacad.app.exception.AbstractException;
+import com.bkacad.app.exceptions.AbstractException;
 import com.bkacad.app.views.AbstractView;
 
 public class BaseHomeView extends AbstractView{

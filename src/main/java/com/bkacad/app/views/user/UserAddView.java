@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import com.bkacad.app.App;
 import com.bkacad.app.controllers.UserController;
-import com.bkacad.app.exception.AbstractException;
+import com.bkacad.app.exceptions.AbstractException;
 import com.bkacad.app.models.entity.User.UserRole;
 import com.bkacad.app.views.AbstractView;
 import com.bkacad.app.views.error.ErrorView;

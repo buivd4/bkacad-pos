@@ -2,8 +2,8 @@ package com.bkacad.app.models.facade;
 
 import java.util.ArrayList;
 
-import com.bkacad.app.exception.ServerErrorException;
-import com.bkacad.app.exception.UserNotFoundException;
+import com.bkacad.app.exceptions.ServerErrorException;
+import com.bkacad.app.exceptions.UserNotFoundException;
 import com.bkacad.app.models.entity.User;
 
 public interface UserDAO {

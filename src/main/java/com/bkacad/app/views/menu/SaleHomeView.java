@@ -3,9 +3,10 @@ package com.bkacad.app.views.menu;
 import java.util.Scanner;
 
 import com.bkacad.app.App;
-import com.bkacad.app.exception.AbstractException;
-import com.bkacad.app.exception.WrongUserInputException;
+import com.bkacad.app.exceptions.AbstractException;
+import com.bkacad.app.exceptions.WrongUserInputException;
 import com.bkacad.app.views.error.ErrorView;
+import com.bkacad.app.views.error.NotImplementedYetView;
 
 public class SaleHomeView extends BaseHomeView{
     private Scanner input = App.getInput();
@@ -26,11 +27,15 @@ public class SaleHomeView extends BaseHomeView{
             System.out.print("Your selection [L]/[V]/[C]/[X]/[E]/[R]: ");
             String selection = input.nextLine();
             switch (selection){
-                case "A":
-                    break;
+                case "L":
                 case "V":
-                    break;
+                case "C":
+                case "X":
                 case "E":
+                case "R":
+                    new NotImplementedYetView().render();
+                    break;
+                case "-":
                     System.out.println("Good bye...");
                     return;
                 default:

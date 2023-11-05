@@ -3,8 +3,8 @@ package com.bkacad.app.views.menu;
 import java.util.Scanner;
 
 import com.bkacad.app.App;
-import com.bkacad.app.exception.AbstractException;
-import com.bkacad.app.exception.WrongUserInputException;
+import com.bkacad.app.exceptions.AbstractException;
+import com.bkacad.app.exceptions.WrongUserInputException;
 import com.bkacad.app.views.error.ErrorView;
 import com.bkacad.app.views.user.UserAddView;
 import com.bkacad.app.views.user.prompt.PromptUsernameForEditView;

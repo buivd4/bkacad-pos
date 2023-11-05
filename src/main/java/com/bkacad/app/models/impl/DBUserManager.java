@@ -3,8 +3,8 @@ package com.bkacad.app.models.impl;
 import java.util.ArrayList;
 import java.sql.*;
 
-import com.bkacad.app.exception.ServerErrorException;
-import com.bkacad.app.exception.UserNotFoundException;
+import com.bkacad.app.exceptions.ServerErrorException;
+import com.bkacad.app.exceptions.UserNotFoundException;
 import com.bkacad.app.models.entity.User;
 import com.bkacad.app.models.facade.UserDAO;
 

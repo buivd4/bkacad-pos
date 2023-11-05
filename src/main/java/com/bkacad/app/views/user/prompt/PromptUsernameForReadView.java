@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 import com.bkacad.app.App;
 import com.bkacad.app.controllers.UserController;
-import com.bkacad.app.exception.AbstractException;
+import com.bkacad.app.exceptions.AbstractException;
 import com.bkacad.app.views.AbstractView;
 
 import lombok.Getter;

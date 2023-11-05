@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 import com.bkacad.app.controllers.LoginController;
 import com.bkacad.app.controllers.UserController;
-import com.bkacad.app.exception.AbstractException;
+import com.bkacad.app.exceptions.AbstractException;
 import com.bkacad.app.models.entity.User;
 import com.bkacad.app.models.facade.UserDAO;
 import com.bkacad.app.models.impl.DBUserManager;

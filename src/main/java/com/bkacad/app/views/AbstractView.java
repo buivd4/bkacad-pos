@@ -1,6 +1,6 @@
 package com.bkacad.app.views;
 
-import com.bkacad.app.exception.AbstractException;
+import com.bkacad.app.exceptions.AbstractException;
 import com.bkacad.app.utils.ViewHelper;
 
 public abstract class AbstractView {    

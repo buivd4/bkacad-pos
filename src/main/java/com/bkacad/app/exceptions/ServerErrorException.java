@@ -1,4 +1,4 @@
-package com.bkacad.app.exception;
+package com.bkacad.app.exceptions;
 
 public class ServerErrorException extends AbstractException{
     public ServerErrorException(String msg){

@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 import com.bkacad.app.App;
 import com.bkacad.app.controllers.LoginController;
-import com.bkacad.app.exception.AbstractException;
+import com.bkacad.app.exceptions.AbstractException;
 import com.bkacad.app.views.AbstractView;
 
 public class LoginView extends AbstractView {

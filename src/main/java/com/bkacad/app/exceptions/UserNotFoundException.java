@@ -1,4 +1,4 @@
-package com.bkacad.app.exception;
+package com.bkacad.app.exceptions;
 
 public class UserNotFoundException extends AbstractException{
     public UserNotFoundException(String username){

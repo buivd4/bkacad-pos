@@ -1,7 +1,7 @@
 package com.bkacad.app.controllers;
 
-import com.bkacad.app.exception.AbstractException;
-import com.bkacad.app.exception.ServerErrorException;
+import com.bkacad.app.exceptions.AbstractException;
+import com.bkacad.app.exceptions.ServerErrorException;
 import com.bkacad.app.models.entity.User;
 import com.bkacad.app.models.facade.UserDAO;
 import com.bkacad.app.views.menu.AdminHomeView;
